@@ -32,12 +32,9 @@ def kesha_maker(array)
 end
 
 def find_a(array)
-  collection = []
-  array.each do |string|
-    if string.start_with?{"a"}
-      binding.pry
-      collection.push(string)
+    array.select do |string|
+      string if string.start_with?("a")
     end
   end
-  return collection
+  
 end
